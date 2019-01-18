@@ -10,7 +10,7 @@ defmodule Geo.PostGIS.Extension do
       #If using with Ecto, you may want something like thing instead
       Postgrex.Types.define(MyApp.PostgresTypes,
                     [Geo.PostGIS.Extension] ++ Ecto.Adapters.Postgres.extensions(),
-                    json: Poison)
+                    json: Jason)
 
       opts = [hostname: "localhost", username: "postgres", database: "geo_postgrex_test",
       types: MyApp.PostgresTypes ]
